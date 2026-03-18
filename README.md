@@ -38,43 +38,46 @@ cd docker
 docker-compose up -d
 ```
 
-### 4. Install dependencies
+### 4. Install dependencies (in folder path)
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 5. Run Producer (Terminal 1)
 ```bash
-python producer/producer_owm.py
+python -m producer.producer_owm
 ```
 
 ### 6. Run Consumer (Terminal 2)
 ```bash
-python consumer/consumer.py
+python -m consumer.consumer
 ```
 
 ## Sample Consumer Output
 ```
 =======================================================
-LAT         : 51.5074
-LON         : -0.1278
-OSM ID      : 123456789
-AMENITY     : hospital
-NAME        : St Thomas' Hospital
+
+=======================================================
+LAT         : 51.5006138
+LON         : -0.1077833
+OSM ID      : 671694989
+AMENITY     : fast_food
+NAME        : Lebanese Grills
 LOCATION    : London
 TYPE        : node
 -------------------------------------------------------
-OBS TIME    : 2024-01-15T19:52:00  ← OWM observation time
-FETCHED AT  : 2024-01-15T19:54:12  ← our actual fetch time
-TEMP        : 8.3°C
-FEELS LIKE  : 5.1°C
-HUMIDITY    : 78%
+OBS TIME    : 2026-03-18T21:07:30  ← OWM observation time
+FETCHED AT  : 2026-03-18T21:15:41  ← our actual fetch time
+TEMP        : 9.83°C
+FEELS LIKE  : 9.17°C
+HUMIDITY    : 66%
 RAIN        : 0.0 mm
 SNOWFALL    : 0.0 cm
-WIND        : 21.6 km/h
-GUSTS       : 32.4 km/h
-VISIBILITY  : 9000 m
-PRESSURE    : 1012 hPa
-WEATHER     : Light Rain
+WIND        : 6.44 km/h
+GUSTS       : 11.27 km/h
+VISIBILITY  : 10000 m
+PRESSURE    : 1024 hPa
+WEATHER     : Clear Sky
 =======================================================
+
 ```
