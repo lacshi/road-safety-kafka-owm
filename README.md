@@ -3,7 +3,6 @@
 Real-time road safety data pipeline using Apache Kafka.
 Streams OSM amenities and live weather data in parallel.
 
-## What Changed from Original
 - Weather API switched from **Open-Meteo → OpenWeatherMap** (2–5 min lag vs 5–15 min)
 - Weather producer now polls every **15s** with **change detection** (no duplicate Kafka messages)
 - Consumer shows both `OBS TIME` (OWM observation) and `FETCHED AT` (actual fetch time) so you can see the exact lag
